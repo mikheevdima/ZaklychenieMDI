@@ -1,0 +1,15 @@
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\bin\Debug\ZaklychenieMDI.exe.config
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\bin\Debug\ZaklychenieMDI.exe
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\bin\Debug\ZaklychenieMDI.pdb
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.csprojResolveAssemblyReference.cache
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.Properties.Resources.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.csproj.GenerateResource.Cache
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.exe
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.pdb
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.HelloForm.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.MainForm.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FirstForm.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.SecondForm.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.ThirdForm.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FourthForm.resources
+c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FifthForm.resources

@@ -53,7 +53,7 @@
             "Интенсивное движение транспортных средств в момент контроля",
             "Отсутствуют"});
             this.PomehicomboBox.Location = new System.Drawing.Point(27, 160);
-            this.PomehicomboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PomehicomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.PomehicomboBox.Name = "PomehicomboBox";
             this.PomehicomboBox.Size = new System.Drawing.Size(902, 29);
             this.PomehicomboBox.TabIndex = 97;
@@ -68,7 +68,7 @@
             "Класс <<С>> Малозначительный дефект, требующий контроля и ремонта в плановый пери" +
                 "од"});
             this.StepencomboBox.Location = new System.Drawing.Point(27, 273);
-            this.StepencomboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.StepencomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.StepencomboBox.Name = "StepencomboBox";
             this.StepencomboBox.Size = new System.Drawing.Size(902, 29);
             this.StepencomboBox.TabIndex = 96;
@@ -94,7 +94,7 @@
             "Признаки повреждения теплотрассы на момент обследования на данном участке не обна" +
                 "ружены"});
             this.PriznakicomboBox.Location = new System.Drawing.Point(27, 53);
-            this.PriznakicomboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PriznakicomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.PriznakicomboBox.Name = "PriznakicomboBox";
             this.PriznakicomboBox.Size = new System.Drawing.Size(902, 29);
             this.PriznakicomboBox.TabIndex = 95;
@@ -106,9 +106,9 @@
             this.label20.Location = new System.Drawing.Point(20, 354);
             this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(274, 21);
+            this.label20.Size = new System.Drawing.Size(490, 21);
             this.label20.TabIndex = 92;
-            this.label20.Text = "Анализ результатов диагностики";
+            this.label20.Text = "Вероятность обнаружения повреждения в указанном месте";
             // 
             // label21
             // 
@@ -147,8 +147,12 @@
             // 
             this.AnalizcomboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AnalizcomboBox.FormattingEnabled = true;
+            this.AnalizcomboBox.Items.AddRange(new object[] {
+            "Достоверная (80%-99%)",
+            "Позитивная (60%-80%)",
+            "Негативная (30%-60%)"});
             this.AnalizcomboBox.Location = new System.Drawing.Point(27, 393);
-            this.AnalizcomboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AnalizcomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnalizcomboBox.Name = "AnalizcomboBox";
             this.AnalizcomboBox.Size = new System.Drawing.Size(902, 29);
             this.AnalizcomboBox.TabIndex = 98;
@@ -156,7 +160,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(27, 629);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 40);
             this.button1.TabIndex = 102;
@@ -199,7 +203,7 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label17);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FourthForm";
             this.Text = "Аналитика";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

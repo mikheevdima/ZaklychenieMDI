@@ -13,3 +13,19 @@ c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\Zaklycheni
 c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.ThirdForm.resources
 c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FourthForm.resources
 c:\users\dmitrii\documents\visual studio 2015\Projects\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FifthForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\bin\Debug\ZaklychenieMDI.exe.config
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.exe
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.pdb
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\bin\Debug\ZaklychenieMDI.exe
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\bin\Debug\ZaklychenieMDI.pdb
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.csprojResolveAssemblyReference.cache
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FifthForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FourthForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.HelloForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.MainForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.FirstForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.SecondForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.Properties.Resources.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.ThirdForm.resources
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.csproj.GenerateResource.Cache
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.SixthForm.resources

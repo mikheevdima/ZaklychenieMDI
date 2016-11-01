@@ -21,7 +21,7 @@ namespace ZaklychenieMDI
             toolStripMenuItem3.BackColor = System.Drawing.Color.Red;
             toolStripMenuItem4.BackColor = System.Drawing.Color.Red;
             toolStripMenuItem5.BackColor = System.Drawing.Color.Red;
-            ToolStripMenuItem6.BackColor = System.Drawing.Color.Red;
+            toolStripMenuItem6.BackColor = System.Drawing.Color.Red;
         }
 
         public static MainForm Current;
@@ -54,6 +54,12 @@ namespace ZaklychenieMDI
         {
             get { return toolStripMenuItem5.BackColor; }
             set { toolStripMenuItem5.BackColor = value; }
+        }
+
+        public Color Color6
+        {
+            get { return toolStripMenuItem6.BackColor; }
+            set { toolStripMenuItem6.BackColor = value; }
         }
 
         public MainForm()
@@ -151,6 +157,21 @@ namespace ZaklychenieMDI
             FifthForm fr5 = new FifthForm();
             fr5.MdiParent = this;
             fr5.Show();
+        }
+
+        private void ToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "SixthForm")
+                {
+                    return;
+                }
+            }
+            CloseChildForms();
+            SixthForm fr6 = new SixthForm();
+            fr6.MdiParent = this;
+            fr6.Show();
         }
     }
 }

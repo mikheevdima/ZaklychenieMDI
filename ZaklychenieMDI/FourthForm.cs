@@ -23,6 +23,7 @@ namespace ZaklychenieMDI
             Analys.Pomehi = PomehicomboBox.Text;
             Analys.Analiz = AnalizcomboBox.Text;
             Analys.Stepen = StepencomboBox.Text;
+            MainForm.Current.Color4 = Color.LawnGreen;
         }
     }
 }

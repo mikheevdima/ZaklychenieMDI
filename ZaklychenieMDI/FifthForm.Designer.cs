@@ -75,10 +75,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ZaklychenieMDI.Properties.Resources.Koala;
+            this.pictureBox1.Image = global::ZaklychenieMDI.Properties.Resources.дом_дом;
             this.pictureBox1.Location = new System.Drawing.Point(16, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(619, 465);
+            this.pictureBox1.Size = new System.Drawing.Size(608, 421);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -100,6 +100,7 @@
             this.Name = "FifthForm";
             this.Text = " Схема";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FifthForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

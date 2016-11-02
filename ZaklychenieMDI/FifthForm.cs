@@ -65,5 +65,14 @@ namespace ZaklychenieMDI
             ZaklychenieMDI.Layout.Pic = pictureBox1.Image;
             MainForm.Current.Color5 = Color.LawnGreen;
         }
+
+        private void FifthForm_Load(object sender, EventArgs e)
+        {
+            if (ZaklychenieMDI.Layout.Pic != null)
+            {
+                pictureBox1.Image = ZaklychenieMDI.Layout.Pic;
+            }
+            
+        }
     }
 }

@@ -55,6 +55,7 @@
             this.TipProkladkicomboBox.Name = "TipProkladkicomboBox";
             this.TipProkladkicomboBox.Size = new System.Drawing.Size(1075, 29);
             this.TipProkladkicomboBox.TabIndex = 61;
+            this.TipProkladkicomboBox.SelectedIndexChanged += new System.EventHandler(this.TipProkladkicomboBox_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -74,6 +75,7 @@
             this.PoktiriecomboBox.Name = "PoktiriecomboBox";
             this.PoktiriecomboBox.Size = new System.Drawing.Size(533, 29);
             this.PoktiriecomboBox.TabIndex = 59;
+            this.PoktiriecomboBox.SelectedIndexChanged += new System.EventHandler(this.PoktiriecomboBox_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -93,6 +95,7 @@
             this.TipIzolyaciicomboBox.Name = "TipIzolyaciicomboBox";
             this.TipIzolyaciicomboBox.Size = new System.Drawing.Size(533, 29);
             this.TipIzolyaciicomboBox.TabIndex = 57;
+            this.TipIzolyaciicomboBox.SelectedIndexChanged += new System.EventHandler(this.TipIzolyaciicomboBox_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -111,6 +114,7 @@
             this.LtextBox.Name = "LtextBox";
             this.LtextBox.Size = new System.Drawing.Size(533, 29);
             this.LtextBox.TabIndex = 55;
+            this.LtextBox.TextChanged += new System.EventHandler(this.LtextBox_TextChanged);
             // 
             // label12
             // 
@@ -129,6 +133,7 @@
             this.DtextBox.Name = "DtextBox";
             this.DtextBox.Size = new System.Drawing.Size(533, 29);
             this.DtextBox.TabIndex = 53;
+            this.DtextBox.TextChanged += new System.EventHandler(this.DtextBox_TextChanged);
             // 
             // label11
             // 
@@ -154,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 787);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TipProkladkicomboBox);
             this.Controls.Add(this.label15);

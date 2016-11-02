@@ -154,10 +154,31 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Koala.jpg" />
+    <None Include="Resources\дом+дом.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\дом+дом.jpg" />
+    <None Include="Resources\дом+камера.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\дом+камера+камера.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\камера+дом.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\камера+дом+камера.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\камера+камера.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\камера+камера+дом.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\узел+узел.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\нет.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

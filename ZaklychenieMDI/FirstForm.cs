@@ -148,19 +148,29 @@ namespace ZaklychenieMDI
         private void VvodycomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             MainForm.Current.Color1 = Color.Red;
+            MainForm.Current.Color2 = Color.Red;
             LoadListUzelFrom(IfArea());
             LoadListUzelTo(IfArea());
+            TrumpetParameters.D = null;
+            TrumpetParameters.L = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm.Current.Color1 = Color.LawnGreen;
-            SetParameters.Seti = VvodycomboBox.Text;
-            SetParameters.TkFrom = LineFromcomboBox.Text;
-            SetParameters.TkTo = LineTocomboBox.Text;
-            SetParameters.Area = Arealabel.Text;
-            SetParameters.Shirota = maskedTextBox1.Text;
-            SetParameters.Dolgota = maskedTextBox2.Text;
+            if (VvodycomboBox.Text != "")
+            {
+                MainForm.Current.Color1 = Color.LawnGreen;
+                SetParameters.Seti = VvodycomboBox.Text;
+                SetParameters.TkFrom = LineFromcomboBox.Text;
+                SetParameters.TkTo = LineTocomboBox.Text;
+                SetParameters.Area = Arealabel.Text;
+                SetParameters.Shirota = maskedTextBox1.Text;
+                SetParameters.Dolgota = maskedTextBox2.Text;
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
         }
 
         private void FirstForm_Load(object sender, EventArgs e)

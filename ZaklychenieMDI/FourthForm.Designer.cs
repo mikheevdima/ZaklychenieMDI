@@ -52,11 +52,12 @@
             "Отсутствие точной информации о расположении объекта контроля",
             "Интенсивное движение транспортных средств в момент контроля",
             "Отсутствуют"});
-            this.PomehicomboBox.Location = new System.Drawing.Point(27, 160);
+            this.PomehicomboBox.Location = new System.Drawing.Point(24, 101);
             this.PomehicomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.PomehicomboBox.Name = "PomehicomboBox";
             this.PomehicomboBox.Size = new System.Drawing.Size(902, 29);
             this.PomehicomboBox.TabIndex = 97;
+            this.PomehicomboBox.SelectedIndexChanged += new System.EventHandler(this.PomehicomboBox_SelectedIndexChanged);
             // 
             // StepencomboBox
             // 
@@ -67,11 +68,12 @@
             "Класс <<В>> Значительный дефект, требующий ремонта при первой возможности",
             "Класс <<С>> Малозначительный дефект, требующий контроля и ремонта в плановый пери" +
                 "од"});
-            this.StepencomboBox.Location = new System.Drawing.Point(27, 273);
+            this.StepencomboBox.Location = new System.Drawing.Point(24, 161);
             this.StepencomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.StepencomboBox.Name = "StepencomboBox";
             this.StepencomboBox.Size = new System.Drawing.Size(902, 29);
             this.StepencomboBox.TabIndex = 96;
+            this.StepencomboBox.SelectedIndexChanged += new System.EventHandler(this.StepencomboBox_SelectedIndexChanged);
             // 
             // PriznakicomboBox
             // 
@@ -93,17 +95,18 @@
             "Повышенный расход теплоносителя на участке теплотрассы",
             "Признаки повреждения теплотрассы на момент обследования на данном участке не обна" +
                 "ружены"});
-            this.PriznakicomboBox.Location = new System.Drawing.Point(27, 53);
+            this.PriznakicomboBox.Location = new System.Drawing.Point(24, 41);
             this.PriznakicomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.PriznakicomboBox.Name = "PriznakicomboBox";
             this.PriznakicomboBox.Size = new System.Drawing.Size(902, 29);
             this.PriznakicomboBox.TabIndex = 95;
+            this.PriznakicomboBox.SelectedIndexChanged += new System.EventHandler(this.PriznakicomboBox_SelectedIndexChanged);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(20, 354);
+            this.label20.Location = new System.Drawing.Point(20, 195);
             this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(490, 21);
@@ -114,7 +117,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(20, 234);
+            this.label21.Location = new System.Drawing.Point(20, 135);
             this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(165, 21);
@@ -136,7 +139,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(20, 121);
+            this.label17.Location = new System.Drawing.Point(20, 75);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(141, 21);
@@ -151,15 +154,16 @@
             "Достоверная (80%-99%)",
             "Позитивная (60%-80%)",
             "Негативная (30%-60%)"});
-            this.AnalizcomboBox.Location = new System.Drawing.Point(27, 393);
+            this.AnalizcomboBox.Location = new System.Drawing.Point(24, 221);
             this.AnalizcomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnalizcomboBox.Name = "AnalizcomboBox";
             this.AnalizcomboBox.Size = new System.Drawing.Size(902, 29);
             this.AnalizcomboBox.TabIndex = 98;
+            this.AnalizcomboBox.SelectedIndexChanged += new System.EventHandler(this.AnalizcomboBox_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(27, 629);
+            this.button1.Location = new System.Drawing.Point(27, 393);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 40);
@@ -170,17 +174,18 @@
             // 
             // PrimechanietextBox
             // 
-            this.PrimechanietextBox.Location = new System.Drawing.Point(27, 495);
+            this.PrimechanietextBox.Location = new System.Drawing.Point(27, 279);
             this.PrimechanietextBox.Multiline = true;
             this.PrimechanietextBox.Name = "PrimechanietextBox";
             this.PrimechanietextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.PrimechanietextBox.Size = new System.Drawing.Size(902, 106);
             this.PrimechanietextBox.TabIndex = 104;
+            this.PrimechanietextBox.TextChanged += new System.EventHandler(this.PrimechanietextBox_TextChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(23, 447);
+            this.label22.Location = new System.Drawing.Point(23, 255);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(109, 21);
             this.label22.TabIndex = 103;

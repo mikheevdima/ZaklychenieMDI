@@ -112,31 +112,67 @@ namespace ZaklychenieMDI
 
         private void SecondForm_Load(object sender, EventArgs e)
         {
-            if ((TrumpetParameters.D != null) && (TrumpetParameters.Prokladka != null))
+            if (SetParameters.Seti != null)
             {
-                DtextBox.Text = TrumpetParameters.D;
-                LtextBox.Text = TrumpetParameters.L;
-                TipIzolyaciicomboBox.Text = TrumpetParameters.Izolyacia;
-                PoktiriecomboBox.Text = TrumpetParameters.Pokritie;
-                TipProkladkicomboBox.Text = TrumpetParameters.Prokladka;
-            }
-            else
-            {
-                FindD(SetParameters.Area);
-                GetSumLength((SetParameters.Area));
-                GetPokrytie();
-                GetIzolyacia();
+                if ((TrumpetParameters.D != null) && (TrumpetParameters.Prokladka != null))
+                {
+                    DtextBox.Text = TrumpetParameters.D;
+                    LtextBox.Text = TrumpetParameters.L;
+                    TipIzolyaciicomboBox.Text = TrumpetParameters.Izolyacia;
+                    PoktiriecomboBox.Text = TrumpetParameters.Pokritie;
+                    TipProkladkicomboBox.Text = TrumpetParameters.Prokladka;
+                }
+                else
+                {
+                    FindD(SetParameters.Area);
+                    GetSumLength((SetParameters.Area));
+                    GetPokrytie();
+                    GetIzolyacia();
+                }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TrumpetParameters.D = DtextBox.Text;
-            TrumpetParameters.L = LtextBox.Text;
-            TrumpetParameters.Izolyacia = TipIzolyaciicomboBox.Text.ToLower();
-            TrumpetParameters.Pokritie = PoktiriecomboBox.Text.ToLower();
-            TrumpetParameters.Prokladka = TipProkladkicomboBox.Text.ToLower();
-            MainForm.Current.Color2=Color.LawnGreen;
+            if ((DtextBox.Text != "") && (LtextBox.Text != "") && (PoktiriecomboBox.Text != "") &&
+                (TipIzolyaciicomboBox.Text != "") && (TipProkladkicomboBox.Text != ""))
+            {
+                TrumpetParameters.D = DtextBox.Text;
+                TrumpetParameters.L = LtextBox.Text;
+                TrumpetParameters.Izolyacia = TipIzolyaciicomboBox.Text.ToLower();
+                TrumpetParameters.Pokritie = PoktiriecomboBox.Text.ToLower();
+                TrumpetParameters.Prokladka = TipProkladkicomboBox.Text.ToLower();
+                MainForm.Current.Color2 = Color.LawnGreen;
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
+        }
+
+        private void DtextBox_TextChanged(object sender, EventArgs e)
+        {
+            MainForm.Current.Color2 = Color.Red;
+        }
+
+        private void LtextBox_TextChanged(object sender, EventArgs e)
+        {
+            MainForm.Current.Color2 = Color.Red;
+        }
+
+        private void TipIzolyaciicomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.Current.Color2 = Color.Red;
+        }
+
+        private void PoktiriecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.Current.Color2 = Color.Red;
+        }
+
+        private void TipProkladkicomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.Current.Color2 = Color.Red;
         }
     }
 }

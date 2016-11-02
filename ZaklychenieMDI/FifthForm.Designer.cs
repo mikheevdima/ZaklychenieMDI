@@ -39,6 +39,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Нет",
             "Камера + дом",
             "Дом + камера",
             "Камера + камера",
@@ -52,6 +53,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(280, 29);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -75,7 +77,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ZaklychenieMDI.Properties.Resources.дом_дом;
+            this.pictureBox1.Image = global::ZaklychenieMDI.Properties.Resources.нет;
             this.pictureBox1.Location = new System.Drawing.Point(16, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(608, 421);
@@ -111,7 +113,7 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

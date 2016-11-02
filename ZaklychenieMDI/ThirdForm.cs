@@ -61,13 +61,25 @@ namespace ZaklychenieMDI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Equipment.AllEquipment = EquipmentBox.Text.Substring(0, EquipmentBox.Text.Length - 2);
-            MainForm.Current.Color3 = Color.LawnGreen;
+            if (EquipmentBox.Text != "")
+            {
+                Equipment.AllEquipment = EquipmentBox.Text.Substring(0, EquipmentBox.Text.Length - 2);
+                MainForm.Current.Color3 = Color.LawnGreen;
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
         }
 
         private void ThirdForm_Load(object sender, EventArgs e)
         {
             EquipmentBox.Text = Equipment.AllEquipment;
+        }
+
+        private void EquipmentBox_TextChanged(object sender, EventArgs e)
+        {
+            MainForm.Current.Color3 = Color.Red;
         }
     }
 }

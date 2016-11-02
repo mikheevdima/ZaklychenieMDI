@@ -74,5 +74,47 @@ namespace ZaklychenieMDI
             }
             
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.Text)
+            {
+
+                case "Камера + дом":
+                    pictureBox1.Image = Properties.Resources.камера_дом;
+                    break;
+
+                case "Дом + камера":
+                    pictureBox1.Image = Properties.Resources.дом_камера;
+                    break;
+
+                case "Камера + камера":
+                    pictureBox1.Image = Properties.Resources.камера_камера;
+                    break;
+
+                case "Дом + дом":
+                    pictureBox1.Image = Properties.Resources.дом_дом;
+                    break;
+
+                case "Камера + камера + дом":
+                    pictureBox1.Image = Properties.Resources.камера_камера_дом;
+                    break;
+
+                case "Камера + дом + камера":
+                    pictureBox1.Image = Properties.Resources.камера_дом_камера;
+                    break;
+
+                case "Дом + камера + камера":
+                    pictureBox1.Image = Properties.Resources.дом_камера_камера;
+                    break;
+
+                case "Узел + узел":
+                    pictureBox1.Image = Properties.Resources.узел_узел;
+                    break;
+                case "Нет":
+                    pictureBox1.Image = Properties.Resources.нет;
+                    break;
+            }
+        }
     }
 }

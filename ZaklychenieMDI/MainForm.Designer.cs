@@ -102,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ZaklychenieMDI.Properties.Resources._7f4adb05_0f8e_406c_990b_2ef9dff3f021;
             this.ClientSize = new System.Drawing.Size(1245, 656);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

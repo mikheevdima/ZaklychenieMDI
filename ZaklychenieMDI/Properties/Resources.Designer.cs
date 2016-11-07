@@ -63,6 +63,26 @@ namespace ZaklychenieMDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0310_NTV_1920_TRUBI {
+            get {
+                object obj = ResourceManager.GetObject("0310_NTV_1920_TRUBI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7f4adb05_0f8e_406c_990b_2ef9dff3f021 {
+            get {
+                object obj = ResourceManager.GetObject("7f4adb05-0f8e-406c-990b-2ef9dff3f021", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap дом_дом {
             get {
                 object obj = ResourceManager.GetObject("дом+дом", resourceCulture);
@@ -136,6 +156,16 @@ namespace ZaklychenieMDI.Properties {
         internal static System.Drawing.Bitmap нет {
             get {
                 object obj = ResourceManager.GetObject("нет", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Теплосеть {
+            get {
+                object obj = ResourceManager.GetObject("Теплосеть", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

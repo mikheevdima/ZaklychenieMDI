@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,7 +63,9 @@ namespace ZaklychenieMDI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ZaklychenieMDI.Layout.Pic = pictureBox1.Image;
+            FileStream fs = new FileStream(pictureBox1.ImageLocation,FileMode.Open,FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            ZaklychenieMDI.Layout.Pic = br.ReadBytes((int)fs.Length);
             MainForm.Current.Color5 = Color.LawnGreen;
         }
 
@@ -70,7 +73,8 @@ namespace ZaklychenieMDI
         {
             if (ZaklychenieMDI.Layout.Pic != null)
             {
-                pictureBox1.Image = ZaklychenieMDI.Layout.Pic;
+                MemoryStream ms = new MemoryStream(ZaklychenieMDI.Layout.Pic);
+                pictureBox1.Image = Image.FromStream(ms);
             }
             
         }

@@ -118,8 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Здравствуйте! Вас приветствует автоматизированное приложение для создания заключений по диагностике подземных теплопроводов.
+    <value>Здравствуйте! Вас приветствует автоматизированное приложение для создания заключений
+по диагностике подземных теплопроводов.
 Выберите действие, которое хотите выполнить, нажав одну из кнопок ниже данной записи.
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAExkAAAEAIAD4BwAAFgAAACgAAAATAAAAMgAAAAEAIAAAAAAAbAcAAMMOAADDDgAAAAAAAAAA
+        AAD//v////////////////////////////////7////4////9f////D////w////8v////b////7////
+        /v///////v7+//////////z///7////////////////////////////////7////9P///ur///3h///+
+        4P///eb////x////+P////7////////////////////8///////////////////////////////+////
+        +P//9d7/072U/7qYYv+9nGT/t5xw//Lixf////P////8//7//f//////////////+///////////////
+        /////////////////v////T///HO/7SSXP+aaR//nm0f/5JqL//x2a/////t////+/////7/////////
+        //////n///7///////////////////////////7////x///zyf/AmFf/qW0T/65xE/+fbyf/99mo////
+        6/////r////+///////+/v7////4///+//////////////////////7////+////8P//9Mj/wplQ/65v
+        Df+1cw3/pHEh//vcpf///+v////6///+/f//////////////9////v///f////3////////////+////
+        /v////D///PH/8KZUP+vcA7/s3MN/6JxIf/73KX////r////+v////7///////////////f///7///3/
+        ///9/////////////v////7////x///zx//CmFH/rnAM/7NzDf+jciL/+tyl////6/////r////+////
+        ///////////3//////////////////////////7////+////8f//88f/wphR/65wDP+zdAz/onEh//nb
+        pP///+v////5/////v/+/v7/////////9////////////////////////////////v////H///PH/8GX
+        UP+ucAz/s3QM/6JxIf/73KX////r////+v////7///////////////f/////////////////////////
+        ///////////z///zx//CmVD/rnAM/7N0DP+icSH//N2m////6/////r////+///////////////3////
+        ////////////////////////////////8///88f/wplQ/65wDP+zdAz/pHEh//vcpf///+z////6////
+        /v//////////////+P///////////////////////////////v////H///PH/8KZUP+ucAz/s3QM/6Rx
+        If/626T////r////+/////7//v7+///+//////j///////////////////////////////7////x///z
+        x//CmVD/rnAM/7N0DP+icSH/+9yl////6/////r////+/////////v/////4////////////////////
+        ///////////+////8f//88f/wphR/65vDf+zcw3/onEh//rbpP///+v////6/////v////////7/////
+        +P///////////////v////z////7////+P///+v///bE/8aZT/+wbwz/tXMM/6JwHf//5qv////m////
+        9P////n////8//////////j///////3///////z////4////7v///+n////e///8vf/OnEn/s3EI/7h0
+        Cf+2fiX//+ij////1f///+b////v////9/////7////4///////9///////7////8v/n1rv/58+l/+/P
+        lP/wxHf/u4Mk/7hzBv+8dQb/snUT/+m5Z//00ZL/38eZ//XoyP///+3////7////9///////////////
+        +f///+3/tphv/6R5Ov+qeCb/r3UW/7RzCv+9dQX/vXYE/7h0Cf+1eBb/r3oj/5pwK//Ns4T///3h////
+        +P////f///////////////j////r/8Cfcv+dbir/pW4Z/61wEv+xcw//tnQN/7RzCv+ycgz/rXER/6lw
+        Ff+VZhz/xah1///+3v////f////3///////////////5////7v+ymHP/nng+/6R2L/+odyv/qXgo/6t4
+        KP+reSf/qXgo/6h4Kv+kdy7/km0v/8uzif///uP////4////+f//////////////+/////L/797D//Xb
+        s//01qX/99ak//fYof/32KH/99ih//bYof/216L/99il/+zTqf//8NP////t////+f////v/////////
+        //////7////7////9f///+/////t////6////+r////q////6v///+r////r////7f///+/////z////
+        +P////z////8/////////////////////v////7////7////+/////r////6////+f////j////6////
+        +v////v////7//7/+/////7////+/////v///////////////////////v7+//7//f////7////+//7/
+        /f////7////+/////v////7////+/////v////7/////////////////AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
   </data>
 </root>

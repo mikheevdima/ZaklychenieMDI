@@ -178,9 +178,6 @@
     <None Include="Resources\узел+узел.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\нет.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\0310_NTV_1920_TRUBI.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +185,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\7f4adb05-0f8e-406c-990b-2ef9dff3f021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\дом+дорога1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\дом+дорога+камера1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\камера+дорога1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\камера+дорога+камера1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49c53676e78f657123c1cd9678b8d38c__750x416.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

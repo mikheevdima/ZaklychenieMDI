@@ -47,7 +47,11 @@
             "Дом + камера + камера",
             "Камера + дом + камера",
             "Камера + камера + дом",
-            "Узел + узел"});
+            "Узел + узел",
+            "Камера + дорога",
+            "Дом + дорога",
+            "Камера + дорога + камера",
+            "Дом + дорога + камера"});
             this.comboBox1.Location = new System.Drawing.Point(14, 35);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox1.Name = "comboBox1";

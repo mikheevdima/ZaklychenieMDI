@@ -118,40 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="камера+камера+дом" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\камера+камера+дом.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="камера+дом" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\камера+дом.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="камера+дом+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\камера+дом+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="камера+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\камера+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Теплосеть" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Теплосеть.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="камера+дорога" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\камера+дорога1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="0310_NTV_1920_TRUBI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0310_NTV_1920_TRUBI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="нет" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\нет.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Теплосеть" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Теплосеть.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="камера+дом" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\камера+дом.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="камера+камера+дом" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\камера+камера+дом.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="дом+дом" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\дом+дом.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="дом+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\дом+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="дом+камера+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\дом+камера+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="камера+дорога+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\камера+дорога+камера1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="камера+дом+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\камера+дом+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7f4adb05-0f8e-406c-990b-2ef9dff3f021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7f4adb05-0f8e-406c-990b-2ef9dff3f021.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="дом+дорога+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\дом+дорога+камера1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="узел+узел" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\узел+узел.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="дом+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\дом+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="дом+дорога" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\дом+дорога1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7f4adb05-0f8e-406c-990b-2ef9dff3f021" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7f4adb05-0f8e-406c-990b-2ef9dff3f021.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="нет" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\нет.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="камера+камера" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\камера+камера.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="49c53676e78f657123c1cd9678b8d38c__750x416" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49c53676e78f657123c1cd9678b8d38c__750x416.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

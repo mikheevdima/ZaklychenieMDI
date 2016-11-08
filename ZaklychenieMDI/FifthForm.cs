@@ -115,7 +115,28 @@ namespace ZaklychenieMDI
                 case "Узел + узел":
                     pictureBox1.Image = Properties.Resources.узел_узел;
                     break;
+
                 case "Нет":
+                    pictureBox1.Image = Properties.Resources.нет;
+                    break;
+
+                case "Камера + дорога":
+                    pictureBox1.Image = Properties.Resources.камера_дорога;
+                    break;
+
+                case "Дом + дорога":
+                    pictureBox1.Image = Properties.Resources.дом_дорога;
+                    break;
+
+                case "Камера + дорога + камера":
+                    pictureBox1.Image = Properties.Resources.камера_дорога_камера;
+                    break;
+
+                case "Дом + дорога + камера":
+                    pictureBox1.Image = Properties.Resources.дом_дорога_камера;
+                    break;
+
+                default:
                     pictureBox1.Image = Properties.Resources.нет;
                     break;
             }

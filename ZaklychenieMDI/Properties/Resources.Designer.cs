@@ -73,6 +73,16 @@ namespace ZaklychenieMDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _49c53676e78f657123c1cd9678b8d38c__750x416 {
+            get {
+                object obj = ResourceManager.GetObject("49c53676e78f657123c1cd9678b8d38c__750x416", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7f4adb05_0f8e_406c_990b_2ef9dff3f021 {
             get {
                 object obj = ResourceManager.GetObject("7f4adb05-0f8e-406c-990b-2ef9dff3f021", resourceCulture);
@@ -86,6 +96,26 @@ namespace ZaklychenieMDI.Properties {
         internal static System.Drawing.Bitmap дом_дом {
             get {
                 object obj = ResourceManager.GetObject("дом+дом", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap дом_дорога {
+            get {
+                object obj = ResourceManager.GetObject("дом+дорога", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap дом_дорога_камера {
+            get {
+                object obj = ResourceManager.GetObject("дом+дорога+камера", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,26 @@ namespace ZaklychenieMDI.Properties {
         internal static System.Drawing.Bitmap камера_дом_камера {
             get {
                 object obj = ResourceManager.GetObject("камера+дом+камера", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap камера_дорога {
+            get {
+                object obj = ResourceManager.GetObject("камера+дорога", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap камера_дорога_камера {
+            get {
+                object obj = ResourceManager.GetObject("камера+дорога+камера", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

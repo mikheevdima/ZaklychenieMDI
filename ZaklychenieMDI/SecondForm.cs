@@ -80,7 +80,7 @@ namespace ZaklychenieMDI
             }
             catch
             {
-                //MessageBox.Show("Ошибка от Суммы!");
+                MessageBox.Show("Ошибка от Суммы!");
             }
         }
 

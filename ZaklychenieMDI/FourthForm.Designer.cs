@@ -163,6 +163,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(27, 393);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
@@ -195,6 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.PrimechanietextBox);
             this.Controls.Add(this.label22);
@@ -208,6 +210,7 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label17);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.Color.SteelBlue;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FourthForm";
             this.Text = "Аналитика";

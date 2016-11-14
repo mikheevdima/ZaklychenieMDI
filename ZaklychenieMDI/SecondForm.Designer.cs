@@ -43,6 +43,7 @@
             // 
             // TipProkladkicomboBox
             // 
+            this.TipProkladkicomboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TipProkladkicomboBox.FormattingEnabled = true;
             this.TipProkladkicomboBox.Items.AddRange(new object[] {
             "Бесканальные",
@@ -59,6 +60,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(44, 217);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -69,6 +71,7 @@
             // 
             // PoktiriecomboBox
             // 
+            this.PoktiriecomboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PoktiriecomboBox.FormattingEnabled = true;
             this.PoktiriecomboBox.Location = new System.Drawing.Point(596, 168);
             this.PoktiriecomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -79,6 +82,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(589, 130);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -89,6 +93,7 @@
             // 
             // TipIzolyaciicomboBox
             // 
+            this.TipIzolyaciicomboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TipIzolyaciicomboBox.FormattingEnabled = true;
             this.TipIzolyaciicomboBox.Location = new System.Drawing.Point(51, 168);
             this.TipIzolyaciicomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -99,6 +104,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(44, 130);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -109,6 +115,7 @@
             // 
             // LtextBox
             // 
+            this.LtextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LtextBox.Location = new System.Drawing.Point(596, 84);
             this.LtextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LtextBox.Name = "LtextBox";
@@ -118,6 +125,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(589, 46);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -128,6 +136,7 @@
             // 
             // DtextBox
             // 
+            this.DtextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DtextBox.Location = new System.Drawing.Point(51, 84);
             this.DtextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DtextBox.Name = "DtextBox";
@@ -137,6 +146,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(44, 46);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -147,6 +157,9 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.SteelBlue;
             this.button1.Location = new System.Drawing.Point(354, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 42);
@@ -159,6 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TipProkladkicomboBox);
@@ -172,6 +186,7 @@
             this.Controls.Add(this.DtextBox);
             this.Controls.Add(this.label11);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.Color.SteelBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SecondForm";

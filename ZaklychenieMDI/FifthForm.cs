@@ -63,9 +63,17 @@ namespace ZaklychenieMDI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream(pictureBox1.ImageLocation,FileMode.Open,FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            ZaklychenieMDI.Layout.Pic = br.ReadBytes((int)fs.Length);
+            //Bitmap bm = new Bitmap(pictureBox1.Image);
+            //MemoryStream ms = new MemoryStream();
+            //bm.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+            //ZaklychenieMDI.Layout.Pic = ms.ToArray();
+            Rectangle r = pictureBox1.RectangleToScreen(pictureBox1.ClientRectangle);
+            Bitmap b = new Bitmap(r.Width, r.Height);
+            Graphics g = Graphics.FromImage(b);
+            g.CopyFromScreen(r.Location, new Point(0, 0), r.Size);
+            MemoryStream ms = new MemoryStream();
+            b.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+            ZaklychenieMDI.Layout.Pic = ms.ToArray();
             MainForm.Current.Color5 = Color.LawnGreen;
         }
 

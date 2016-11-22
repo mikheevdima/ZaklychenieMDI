@@ -41,12 +41,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(359, 139);
+            this.label18.Location = new System.Drawing.Point(31, 140);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(129, 21);
             this.label18.TabIndex = 75;
@@ -54,7 +56,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(363, 162);
+            this.dateTimePicker1.Location = new System.Drawing.Point(35, 163);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(320, 29);
             this.dateTimePicker1.TabIndex = 74;
@@ -168,12 +170,37 @@
             this.button3.Text = "Сохранить данные ";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Дефект обнаружен",
+            "Требуется мониторинг",
+            "Необходим доступ",
+            "Контрольный шурф",
+            "Признаков дефекта нет"});
+            this.comboBox1.Location = new System.Drawing.Point(361, 162);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(321, 29);
+            this.comboBox1.TabIndex = 108;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(358, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(206, 21);
+            this.label5.TabIndex = 107;
+            this.label5.Text = "Результаты диагностики";
+            // 
             // SixthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1843, 1195);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -213,5 +240,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

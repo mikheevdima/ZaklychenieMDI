@@ -14,6 +14,8 @@ namespace ZaklychenieMDI
 {
     public partial class SecondForm : Form
     {
+        private int i, j, k, l, m;
+
         public SecondForm()
         {
             InitializeComponent();
@@ -112,6 +114,8 @@ namespace ZaklychenieMDI
 
         private void SecondForm_Load(object sender, EventArgs e)
         {
+            GetPokrytie();
+            GetIzolyacia();
             if (SetParameters.Seti != null)
             {
                 if ((TrumpetParameters.D != null) && (TrumpetParameters.Prokladka != null))
@@ -119,15 +123,13 @@ namespace ZaklychenieMDI
                     DtextBox.Text = TrumpetParameters.D;
                     LtextBox.Text = TrumpetParameters.L;
                     TipIzolyaciicomboBox.Text = TrumpetParameters.Izolyacia;
-                    PoktiriecomboBox.Text = TrumpetParameters.Pokritie;
-                    TipProkladkicomboBox.Text = TrumpetParameters.Prokladka;
+                    PoktiriecomboBox.Text = TrumpetParameters.Pokrytie;
+                    TipProkladkicomboBox.SelectedIndex = TrumpetParameters.ProkladkaId;
                 }
                 else
                 {
                     FindD(SetParameters.Area);
-                    GetSumLength((SetParameters.Area));
-                    GetPokrytie();
-                    GetIzolyacia();
+                    GetSumLength(SetParameters.Area);
                 }
             }
         }
@@ -140,8 +142,9 @@ namespace ZaklychenieMDI
                 TrumpetParameters.D = DtextBox.Text;
                 TrumpetParameters.L = LtextBox.Text;
                 TrumpetParameters.Izolyacia = TipIzolyaciicomboBox.Text.ToLower();
-                TrumpetParameters.Pokritie = PoktiriecomboBox.Text.ToLower();
+                TrumpetParameters.Pokrytie = PoktiriecomboBox.Text.ToLower();
                 TrumpetParameters.Prokladka = TipProkladkicomboBox.Text.ToLower();
+                TrumpetParameters.ProkladkaId = TipProkladkicomboBox.SelectedIndex;
                 MainForm.Current.Color2 = Color.LawnGreen;
             }
             else
@@ -150,29 +153,38 @@ namespace ZaklychenieMDI
             }
         }
 
+        private void ChangeColor(ref int counter)
+        {
+            if (counter > 1)
+            {
+                MainForm.Current.Color2 = Color.Red;
+            }
+            counter++;
+        }
+
         private void DtextBox_TextChanged(object sender, EventArgs e)
         {
-            MainForm.Current.Color2 = Color.Red;
+            ChangeColor(ref i);
         }
 
         private void LtextBox_TextChanged(object sender, EventArgs e)
         {
-            MainForm.Current.Color2 = Color.Red;
+            ChangeColor(ref j);
         }
 
         private void TipIzolyaciicomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MainForm.Current.Color2 = Color.Red;
+            ChangeColor(ref k);
         }
 
         private void PoktiriecomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MainForm.Current.Color2 = Color.Red;
+            ChangeColor(ref l);
         }
 
         private void TipProkladkicomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MainForm.Current.Color2 = Color.Red;
+            ChangeColor(ref m);
         }
     }
 }

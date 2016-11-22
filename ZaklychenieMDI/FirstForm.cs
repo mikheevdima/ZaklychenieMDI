@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ZaklychenieMDI.ChildForms;
 
 
 
@@ -92,9 +93,9 @@ namespace ZaklychenieMDI
                 VvodycomboBox.DataSource = ds.Tables[0];
                 VvodycomboBox.DisplayMember = "Seti";
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Ошибка Сетей!");
+                MessageBox.Show("Ошибка Сетей! + ", ex.Message);
             }
         }
 
@@ -148,7 +149,7 @@ namespace ZaklychenieMDI
         private void VvodycomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             MainForm.Current.Color1 = Color.Red;
-            MainForm.Current.Color2 = Color.Red;
+            //MainForm.Current.Color2 = Color.Red;
             LoadListUzelFrom(IfArea());
             LoadListUzelTo(IfArea());
             TrumpetParameters.D = null;
@@ -171,6 +172,14 @@ namespace ZaklychenieMDI
             {
                 MessageBox.Show("Заполните все поля!");
             }
+
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "SecondForm")
+                {
+                    return;
+                }
+            }
         }
 
         private void FirstForm_Load(object sender, EventArgs e)
@@ -184,6 +193,30 @@ namespace ZaklychenieMDI
                 maskedTextBox1.Text = SetParameters.Shirota;
                 maskedTextBox2.Text = SetParameters.Dolgota;
             }
+        }
+
+        public void CloseChildForms()
+        {
+            Form[] form = MdiChildren;
+            foreach (Form f in form)
+            {
+                f.Close();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "SecondForm")
+                {
+                    return;
+                }
+            }
+            CloseChildForms();
+            SecondForm f2 = new SecondForm();
+            f2.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+            f2.Show();
         }
     }
 }

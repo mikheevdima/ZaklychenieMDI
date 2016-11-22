@@ -11,7 +11,10 @@ namespace ZaklychenieMDI
         public static string D { get; set; }
         public static string L { get; set; }
         public static string Izolyacia { get; set; }
-        public static string Pokritie { get; set; }
+        public static string Pokrytie { get; set; }
         public static string Prokladka { get; set; }
+        public static int IzolyaciaId { get; set; }
+        public static int PokrytieId { get; set; }
+        public static int ProkladkaId { get; set; }
     }
 }

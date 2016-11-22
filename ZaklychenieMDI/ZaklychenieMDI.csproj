@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analys.cs" />
+    <Compile Include="ChildForms.cs" />
     <Compile Include="Equipment.cs" />
     <Compile Include="FifthForm.cs">
       <SubType>Form</SubType>

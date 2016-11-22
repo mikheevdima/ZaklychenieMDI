@@ -176,6 +176,7 @@
             // PrimechanietextBox
             // 
             this.PrimechanietextBox.Location = new System.Drawing.Point(27, 279);
+            this.PrimechanietextBox.MaxLength = 255;
             this.PrimechanietextBox.Multiline = true;
             this.PrimechanietextBox.Name = "PrimechanietextBox";
             this.PrimechanietextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -215,6 +216,7 @@
             this.Name = "FourthForm";
             this.Text = "Аналитика";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FourthForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

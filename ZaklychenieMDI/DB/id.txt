@@ -1,0 +1,16 @@
+USE [ZakluchenieMDI]
+GO
+
+/****** Object:  Table [dbo].[ID]    Script Date: 23.11.2016 1:49:32 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ID](
+	[int] [uniqueidentifier] NOT NULL
+) ON [PRIMARY]
+
+GO
+

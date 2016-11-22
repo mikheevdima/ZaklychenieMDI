@@ -26,6 +26,11 @@ namespace ZaklychenieMDI
                 Analys.Pomehi = PomehicomboBox.Text;
                 Analys.Analiz = AnalizcomboBox.Text;
                 Analys.Stepen = StepencomboBox.Text;
+                Analys.PriznakiId = PriznakicomboBox.SelectedIndex;
+                Analys.PomehiId = PomehicomboBox.SelectedIndex;
+                Analys.AnalizId = AnalizcomboBox.SelectedIndex;
+                Analys.StepenId = StepencomboBox.SelectedIndex;
+                Analys.Primechanie = PrimechanietextBox.Text;
                 MainForm.Current.Color4 = Color.LawnGreen;
             }
             else
@@ -57,6 +62,18 @@ namespace ZaklychenieMDI
         private void PrimechanietextBox_TextChanged(object sender, EventArgs e)
         {
             MainForm.Current.Color4 = Color.Red;
+        }
+
+        private void FourthForm_Load(object sender, EventArgs e)
+        {
+            if (Analys.Priznaki != "")
+            {
+                PriznakicomboBox.SelectedIndex = Analys.PriznakiId;
+                PomehicomboBox.SelectedIndex = Analys.PomehiId;
+                AnalizcomboBox.SelectedIndex = Analys.AnalizId;
+                StepencomboBox.SelectedIndex = Analys.StepenId;
+                PrimechanietextBox.Text = Analys.Primechanie;
+            }
         }
     }
 }

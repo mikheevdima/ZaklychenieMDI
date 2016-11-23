@@ -158,15 +158,29 @@ namespace ZaklychenieMDI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (VvodycomboBox.Text != "")
+            if (VvodycomboBox.Text != "" && LineFromcomboBox.Text != "" && LineTocomboBox.Text != "" && Arealabel.Text != "")
             {
                 MainForm.Current.Color1 = Color.LawnGreen;
                 SetParameters.Seti = VvodycomboBox.Text;
                 SetParameters.TkFrom = LineFromcomboBox.Text;
                 SetParameters.TkTo = LineTocomboBox.Text;
                 SetParameters.Area = Arealabel.Text;
-                SetParameters.Shirota = maskedTextBox1.Text;
-                SetParameters.Dolgota = maskedTextBox2.Text;
+                if (maskedTextBox1.Text == "N  ,     °")
+                {
+                    SetParameters.Shirota = "";
+                }
+                else
+                {
+                    SetParameters.Shirota = maskedTextBox1.Text;
+                }
+                if (maskedTextBox1.Text == "E  ,     °")
+                {
+                    SetParameters.Dolgota = "";
+                }
+                else
+                {
+                    SetParameters.Dolgota = maskedTextBox2.Text;
+                }
             }
             else
             {

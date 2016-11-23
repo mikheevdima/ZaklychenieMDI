@@ -66,7 +66,7 @@ namespace ZaklychenieMDI
 
         private void FourthForm_Load(object sender, EventArgs e)
         {
-            if (Analys.Priznaki != "")
+            if (Analys.Priznaki != null)
             {
                 PriznakicomboBox.SelectedIndex = Analys.PriznakiId;
                 PomehicomboBox.SelectedIndex = Analys.PomehiId;

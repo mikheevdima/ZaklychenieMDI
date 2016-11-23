@@ -30,19 +30,18 @@
         {
             this.label18 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.BosstextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.GoalcomboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.IspolnitelcomboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ZakluchenietextBox = new System.Windows.Forms.TextBox();
+            this.IdcomboBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ResultscomboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label18
@@ -61,22 +60,14 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(320, 29);
             this.dateTimePicker1.TabIndex = 74;
             // 
-            // BosstextBox
-            // 
-            this.BosstextBox.Location = new System.Drawing.Point(362, 110);
-            this.BosstextBox.Name = "BosstextBox";
-            this.BosstextBox.Size = new System.Drawing.Size(321, 29);
-            this.BosstextBox.TabIndex = 73;
-            this.BosstextBox.Text = "Д.Е. Чуйко";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(358, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 21);
+            this.label4.Size = new System.Drawing.Size(101, 21);
             this.label4.TabIndex = 72;
-            this.label4.Text = "Начальник СД";
+            this.label4.Text = "Должность";
             // 
             // GoalcomboBox
             // 
@@ -91,9 +82,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(358, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 21);
+            this.label3.Size = new System.Drawing.Size(53, 21);
             this.label3.TabIndex = 70;
-            this.label3.Text = "Цель обследования";
+            this.label3.Text = "delete";
             // 
             // IspolnitelcomboBox
             // 
@@ -121,12 +112,12 @@
             this.label2.TabIndex = 68;
             this.label2.Text = "Испольнитель";
             // 
-            // ZakluchenietextBox
+            // IdcomboBox
             // 
-            this.ZakluchenietextBox.Location = new System.Drawing.Point(35, 56);
-            this.ZakluchenietextBox.Name = "ZakluchenietextBox";
-            this.ZakluchenietextBox.Size = new System.Drawing.Size(321, 29);
-            this.ZakluchenietextBox.TabIndex = 67;
+            this.IdcomboBox.Location = new System.Drawing.Point(35, 56);
+            this.IdcomboBox.Name = "IdcomboBox";
+            this.IdcomboBox.Size = new System.Drawing.Size(321, 29);
+            this.IdcomboBox.TabIndex = 67;
             // 
             // label1
             // 
@@ -147,17 +138,7 @@
             this.button2.TabIndex = 104;
             this.button2.Text = "Подтвердить введенные данные";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(35, 249);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(369, 40);
-            this.button1.TabIndex = 105;
-            this.button1.Text = "Создать отчет";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -167,22 +148,23 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(369, 40);
             this.button3.TabIndex = 106;
-            this.button3.Text = "Сохранить данные ";
+            this.button3.Text = "Сохранить данные и создать отчет";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // ResultscomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ResultscomboBox.FormattingEnabled = true;
+            this.ResultscomboBox.Items.AddRange(new object[] {
             "Дефект обнаружен",
             "Требуется мониторинг",
             "Необходим доступ",
             "Контрольный шурф",
             "Признаков дефекта нет"});
-            this.comboBox1.Location = new System.Drawing.Point(361, 162);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(321, 29);
-            this.comboBox1.TabIndex = 108;
+            this.ResultscomboBox.Location = new System.Drawing.Point(361, 162);
+            this.ResultscomboBox.Name = "ResultscomboBox";
+            this.ResultscomboBox.Size = new System.Drawing.Size(321, 29);
+            this.ResultscomboBox.TabIndex = 108;
             // 
             // label5
             // 
@@ -193,6 +175,22 @@
             this.label5.TabIndex = 107;
             this.label5.Text = "Результаты диагностики";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Инженер",
+            "Инженер 2 категории",
+            "Инженер 1 категории",
+            "Ведущий инженер-технолог",
+            "Начальник сектора",
+            "Заместитель начальника службы диагностики",
+            "Начальник службы диагностики"});
+            this.comboBox1.Location = new System.Drawing.Point(362, 108);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(321, 29);
+            this.comboBox1.TabIndex = 109;
+            // 
             // SixthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -200,19 +198,18 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ResultscomboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.BosstextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.GoalcomboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.IspolnitelcomboBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ZakluchenietextBox);
+            this.Controls.Add(this.IdcomboBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.SteelBlue;
@@ -220,6 +217,7 @@
             this.Name = "SixthForm";
             this.Text = "Заключение";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.SixthForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,18 +227,17 @@
 
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox BosstextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox GoalcomboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox IspolnitelcomboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox ZakluchenietextBox;
+        private System.Windows.Forms.TextBox IdcomboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ResultscomboBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

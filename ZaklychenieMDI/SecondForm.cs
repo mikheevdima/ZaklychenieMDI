@@ -35,9 +35,9 @@ namespace ZaklychenieMDI
                 PoktiriecomboBox.DataSource = ds.Tables[0];
                 PoktiriecomboBox.DisplayMember = "Pokrytie";
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Ошибка покрытия!");
+                MessageBox.Show("Ошибка покрытия!" + ex.Message);
             }
         }
 
@@ -55,9 +55,9 @@ namespace ZaklychenieMDI
                 TipIzolyaciicomboBox.DataSource = ds.Tables[0];
                 TipIzolyaciicomboBox.DisplayMember = "Izolyacia";
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Ошибка изоляции!");
+                MessageBox.Show("Ошибка изоляции!" + ex.Message);
             }
         }
 
@@ -80,9 +80,9 @@ namespace ZaklychenieMDI
                 reader.Close();
                 conn.Close();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Ошибка от Суммы!");
+                MessageBox.Show("Ошибка от Суммы!" + ex.Message);
             }
         }
 

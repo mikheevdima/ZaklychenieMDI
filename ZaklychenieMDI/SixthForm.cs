@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,11 +16,14 @@ using static ZaklychenieMDI.Equipment;
 using static ZaklychenieMDI.Layout;
 using static ZaklychenieMDI.SetParameters;
 using static ZaklychenieMDI.TrumpetParameters;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace ZaklychenieMDI
 {
     public partial class SixthForm : Form
     {
+        private readonly string TemplateFileName = @"C:\GitHub\ZaklychenieMDI\template.docx";
+
         public SixthForm()
         {
             InitializeComponent();
@@ -51,9 +56,9 @@ namespace ZaklychenieMDI
         {
             SqlConnection conn = new SqlConnection(Program.Connection.GetConnectionStringByName("Conn3"));
             string sql = string.Format("Insert Into Parameters(ID, seti, tkfrom, tkto, shirota, dolgota, d, l, izolyacia, pokritie, prokladka, " +
-                                       "allequipment, priznaki, pomehi, stepen, analiz, primechanie, pic, goal, ispolnitel, boss, date, results) " +
+                                       "allequipment, priznaki, pomehi, stepen, analiz, primechanie, pic, goal, ispolnitel, date, results) " +
                                        "Values(@ID, @seti, @tkfrom, @tkto, @shirota, @dolgota, @d, @l, @izolyacia, @pokritie, @prokladka, " +
-                                       "@allequipment, @priznaki, @pomehi, @stepen, @analiz, @primechanie, @pic, @goal, @ispolnitel, @boss, @date, @results)");
+                                       "@allequipment, @priznaki, @pomehi, @stepen, @analiz, @primechanie, @pic, @goal, @ispolnitel, @date, @results)");
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 // Добавить параметры
@@ -77,7 +82,6 @@ namespace ZaklychenieMDI
                 cmd.Parameters.AddWithValue("@pic", ZaklychenieMDI.Layout.Pic);
                 cmd.Parameters.AddWithValue("@goal", Conclusion.Goal);
                 cmd.Parameters.AddWithValue("@ispolnitel", Conclusion.Ispolnitel);
-                cmd.Parameters.AddWithValue("@boss", Conclusion.Boss);
                 cmd.Parameters.AddWithValue("@date", Conclusion.Date);
                 cmd.Parameters.AddWithValue("@results", Conclusion.Results);
                 try
@@ -90,16 +94,147 @@ namespace ZaklychenieMDI
                 catch (Exception exception)
                 {
                     MessageBox.Show("Ошибка сохранения! " + exception.Message);
-                    throw;
                 }
             }
         }
 
+        private void FindAndReplace(Microsoft.Office.Interop.Word.Application wordApp, object findText, object replaceWithText)
+        {
+            object matchCase = true;
+            object matchWholeWord = true;
+            object matchWildCards = false;
+            object matchSoundLike = false;
+            object nmatchAllForms = false;
+            object forward = true;
+            object format = false;
+            object matchKashida = false;
+            object matchDiactitics = false;
+            object matchAlefHamza = false;
+            object matchControl = false;
+            object read_only = false;
+            object visible = true;
+            object replace = 2;
+            object wrap = 1;
+
+            wordApp.Selection.Find.Execute(ref findText,
+                        ref matchCase, ref matchWholeWord,
+                        ref matchWildCards, ref matchSoundLike,
+                        ref nmatchAllForms, ref forward,
+                        ref wrap, ref format, ref replaceWithText,
+                        ref replace, ref matchKashida,
+                        ref matchDiactitics, ref matchAlefHamza,
+                        ref matchControl);
+        }
+
+        public List<int> getRunningProcesses()
+        {
+            List<int> ProcessIDs = new List<int>();
+            //here we're going to get a list of all running processes on
+            //the computer
+            foreach (Process clsProcess in Process.GetProcesses())
+            {
+                if (Process.GetCurrentProcess().Id == clsProcess.Id)
+                    continue;
+                if (clsProcess.ProcessName.Contains("WINWORD"))
+                {
+                    ProcessIDs.Add(clsProcess.Id);
+                }
+            }
+            return ProcessIDs;
+        }
+
+        private void killProcesses(List<int> processesbeforegen, List<int> processesaftergen)
+        {
+            foreach (int pidafter in processesaftergen)
+            {
+                bool processfound = false;
+                foreach (int pidbefore in processesbeforegen)
+                {
+                    if (pidafter == pidbefore)
+                    {
+                        processfound = true;
+                    }
+                }
+
+                if (processfound == false)
+                {
+                    Process clsProcess = Process.GetProcessById(pidafter);
+                    clsProcess.Kill();
+                }
+            }
+        }
+
+        private void CreateWordDocument(object filename, object savaAs)
+        {
+            List<int> processesbeforegen = getRunningProcesses();
+            object missing = Missing.Value;
+
+            Word.Application wordApp = new Word.Application();
+
+            Word.Document aDoc = null;
+
+            object readOnly = false; //default
+            object isVisible = false;
+
+            wordApp.Visible = false;
+
+            aDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
+                                          ref missing, ref missing, ref missing,
+                                          ref missing, ref missing, ref missing,
+                                          ref missing, ref missing, ref missing,
+                                          ref missing, ref missing, ref missing, ref missing);
+
+            aDoc.Activate();
+
+            try
+            {
+                //Find and replace:
+                FindAndReplace(wordApp, "{Id}", Id);
+                FindAndReplace(wordApp, "{date}", Date);
+                FindAndReplace(wordApp, "{seti}", Seti);
+                FindAndReplace(wordApp, "{tk}", TkFrom + " - " + TkTo);
+                FindAndReplace(wordApp, "{d}", D);
+                FindAndReplace(wordApp, "{l}", L);
+                FindAndReplace(wordApp, "{prokladka}", Prokladka);
+                FindAndReplace(wordApp, "{izolyacia}", Izolyacia);
+                FindAndReplace(wordApp, "{pokrytie}", Pokrytie);
+                FindAndReplace(wordApp, "{priznaki}", Priznaki);
+                FindAndReplace(wordApp, "{pomehi}", Pomehi);
+                FindAndReplace(wordApp, "{stepen}", Stepen);
+                FindAndReplace(wordApp, "{analiz}", Analiz);
+                FindAndReplace(wordApp, "{results}", Results);
+                FindAndReplace(wordApp, "{ispolnitel}", Ispolnitel);
+                FindAndReplace(wordApp, "{doljnost'}", Doljnost);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ошибка" + e.Message);
+            }
+            //Save as: filename
+            try
+            {
+                aDoc.SaveAs2(ref savaAs, ref missing, ref missing, ref missing,
+                        ref missing, ref missing, ref missing,
+                        ref missing, ref missing, ref missing,
+                        ref missing, ref missing, ref missing,
+                        ref missing, ref missing, ref missing);
+            }
+            catch
+            {
+                MessageBox.Show("Возможно, открыт сохраняемый файл!");
+            }
+
+            //Close Document:
+            MessageBox.Show("Отчет создан!");
+            //List<int> processesaftergen = getRunningProcesses();
+            //killProcesses(processesbeforegen, processesaftergen);
+            wordApp.Visible = true;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (BosstextBox.Text != "" && GoalcomboBox.Text != "" && ResultscomboBox.Text != "" && IspolnitelcomboBox.Text != "")
+            if (GoalcomboBox.Text != "" && ResultscomboBox.Text != "" && IspolnitelcomboBox.Text != "")
             {
-                Conclusion.Boss = BosstextBox.Text;
                 Goal = GoalcomboBox.Text;
                 Results = ResultscomboBox.Text;
                 Ispolnitel = IspolnitelcomboBox.Text;
@@ -107,6 +242,8 @@ namespace ZaklychenieMDI
                 Id = Convert.ToInt32(IdcomboBox.Text);
                 ResultsId = ResultscomboBox.SelectedIndex;
                 IspolnitelId = IspolnitelcomboBox.SelectedIndex;
+                DoljnostId = DoljnostcomboBox.SelectedIndex;
+                Doljnost = DoljnostcomboBox.Text;
                 MainForm.Current.Color6 = Color.LawnGreen;
             }
             else
@@ -121,17 +258,26 @@ namespace ZaklychenieMDI
             GetId();
             if (Results != null)
             {
-                BosstextBox.Text = Boss;
                 GoalcomboBox.Text = Goal;
                 dateTimePicker1.Text = Date;
                 ResultscomboBox.SelectedIndex = ResultsId;
                 IspolnitelcomboBox.SelectedIndex = IspolnitelId;
+                DoljnostcomboBox.SelectedIndex = DoljnostId;
+                DoljnostcomboBox.Text = Doljnost;
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Save();
+            //Save();
+            string name = Seti;
+            string final = name.Replace("-", "_").Replace("/", "").Replace("\"", "");
+            saveFileDialog1.Filter = "Word Documents(*.docx;*.doc) | *.docx;*.doc";
+            saveFileDialog1.FileName = final + " " + TkFrom + TkTo;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                CreateWordDocument(TemplateFileName, saveFileDialog1.FileName);
+            }
         }
     }
 }

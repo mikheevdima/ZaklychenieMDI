@@ -77,3 +77,4 @@ D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.Properties.Reso
 D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.SixthForm.resources
 D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.ThirdForm.resources
 D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.csproj.GenerateResource.Cache
+C:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Debug\ZaklychenieMDI.csproj.ResolveComReference.cache

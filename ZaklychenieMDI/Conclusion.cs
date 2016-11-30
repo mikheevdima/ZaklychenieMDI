@@ -16,5 +16,7 @@ namespace ZaklychenieMDI
         public static int IspolnitelId { get; set; }
         public static int ResultsId { get; set; }
         public static int Id { get; set; }
+        public static string Doljnost { get; set; }
+        public static int DoljnostId { get; set; }
     }
 }

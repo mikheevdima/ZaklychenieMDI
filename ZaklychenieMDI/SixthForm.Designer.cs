@@ -43,6 +43,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.DoljnostcomboBox = new System.Windows.Forms.ComboBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label18
@@ -192,12 +195,32 @@
             this.DoljnostcomboBox.Size = new System.Drawing.Size(321, 29);
             this.DoljnostcomboBox.TabIndex = 109;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(198, 342);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(501, 329);
+            this.pictureBox1.TabIndex = 110;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(984, 300);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 42);
+            this.button1.TabIndex = 111;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SixthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DoljnostcomboBox);
             this.Controls.Add(this.ResultscomboBox);
             this.Controls.Add(this.label5);
@@ -219,6 +242,7 @@
             this.Text = "Заключение";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SixthForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +265,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox DoljnostcomboBox;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -93,6 +93,36 @@ namespace ZaklychenieMDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _805524cb23 {
+            get {
+                object obj = ResourceManager.GetObject("805524cb23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _805524cb23_751x501 {
+            get {
+                object obj = ResourceManager.GetObject("805524cb23_751x501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _805524cb23_751x5011 {
+            get {
+                object obj = ResourceManager.GetObject("805524cb23_751x5011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap дом_дом {
             get {
                 object obj = ResourceManager.GetObject("дом+дом", resourceCulture);

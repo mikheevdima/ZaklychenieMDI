@@ -74,6 +74,8 @@ namespace ZaklychenieMDI
             MemoryStream ms = new MemoryStream();
             b.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
             ZaklychenieMDI.Layout.Pic = ms.ToArray();
+            ZaklychenieMDI.Layout.Picture = pictureBox1.Image;
+            //ZaklychenieMDI.Layout.path = pictureBox1.ImageLocation;
             MainForm.Current.Color5 = Color.LawnGreen;
         }
 

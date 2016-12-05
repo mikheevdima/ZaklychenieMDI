@@ -10,5 +10,7 @@ namespace ZaklychenieMDI
     class Layout
     {
         public static byte[] Pic {get; set; }
+        public static Image Picture { get; set; }
+        public static string path { get; set; }
     }
 }

@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -27,6 +29,24 @@ namespace ZaklychenieMDI
         public SixthForm()
         {
             InitializeComponent();
+        }
+
+        private void SaveImage()
+        {
+            Image file = pictureBox1.Image;
+            file.Save("C:/OpenServer/picturetest123.jpeg", ImageFormat.Jpeg);
+        }
+
+        private void DeleteImage()
+        {
+            try
+            {
+                System.IO.File.Delete("C:/OpenServer/picturetest123.jpeg");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "2");
+            }
         }
 
         private void GetId()
@@ -177,14 +197,20 @@ namespace ZaklychenieMDI
             object isVisible = false;
 
             wordApp.Visible = false;
+            try
+            {
+                aDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
+                    ref missing, ref missing, ref missing,
+                    ref missing, ref missing, ref missing,
+                    ref missing, ref missing, ref missing,
+                    ref missing, ref missing, ref missing, ref missing);
 
-            aDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
-                                          ref missing, ref missing, ref missing,
-                                          ref missing, ref missing, ref missing,
-                                          ref missing, ref missing, ref missing,
-                                          ref missing, ref missing, ref missing, ref missing);
-
-            aDoc.Activate();
+                aDoc.Activate();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
 
             try
             {
@@ -205,10 +231,13 @@ namespace ZaklychenieMDI
                 FindAndReplace(wordApp, "{results}", Results);
                 FindAndReplace(wordApp, "{ispolnitel}", Ispolnitel);
                 FindAndReplace(wordApp, "{doljnost'}", Doljnost);
+                SaveImage();
+                aDoc.Bookmarks.get_Item("Image").Range.InlineShapes.AddPicture("C:/OpenServer/picturetest123.jpeg");
+                DeleteImage();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Ошибка" + e.Message);
+                MessageBox.Show("Ошибка сохранения" + e.Message);
             }
             //Save as: filename
             try
@@ -255,6 +284,11 @@ namespace ZaklychenieMDI
 
         private void SixthForm_Load(object sender, EventArgs e)
         {
+            if (ZaklychenieMDI.Layout.Pic != null)
+            {
+                MemoryStream ms = new MemoryStream(ZaklychenieMDI.Layout.Pic);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
             GetId();
             if (Results != null)
             {
@@ -274,10 +308,16 @@ namespace ZaklychenieMDI
             string final = name.Replace("-", "_").Replace("/", "").Replace("\"", "");
             saveFileDialog1.Filter = "Word Documents(*.docx;*.doc) | *.docx;*.doc";
             saveFileDialog1.FileName = final + " " + TkFrom + TkTo;
+            saveFileDialog1.FileName = "Test";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 CreateWordDocument(TemplateFileName, saveFileDialog1.FileName);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DeleteImage();
         }
     }
 }

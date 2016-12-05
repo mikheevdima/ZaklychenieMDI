@@ -45,7 +45,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button1.Location = new System.Drawing.Point(29, 495);
+            this.button1.Location = new System.Drawing.Point(38, 576);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(198, 74);
@@ -77,7 +77,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button2.Location = new System.Drawing.Point(581, 495);
+            this.button2.Location = new System.Drawing.Point(591, 576);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(198, 74);
@@ -91,10 +91,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::ZaklychenieMDI.Properties.Resources._49c53676e78f657123c1cd9678b8d38c__750x416;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 72);
+            this.pictureBox1.Image = global::ZaklychenieMDI.Properties.Resources._805524cb23_751x5011;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(750, 416);
+            this.pictureBox1.Size = new System.Drawing.Size(751, 501);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(818, 573);
+            this.ClientSize = new System.Drawing.Size(819, 659);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);

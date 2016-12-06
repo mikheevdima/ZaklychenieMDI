@@ -14,5 +14,6 @@ namespace ZaklychenieMDI
         public static string Area { get; set; }
         public static string Shirota { get; set; }
         public static string Dolgota { get; set; }
+        public static string Line { get; set; }
     }
 }

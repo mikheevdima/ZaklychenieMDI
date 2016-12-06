@@ -31,8 +31,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.GoalcomboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.IspolnitelcomboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IdcomboBox = new System.Windows.Forms.TextBox();
@@ -45,6 +43,8 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,23 +72,6 @@
             this.label4.Size = new System.Drawing.Size(101, 21);
             this.label4.TabIndex = 72;
             this.label4.Text = "Должность";
-            // 
-            // GoalcomboBox
-            // 
-            this.GoalcomboBox.FormattingEnabled = true;
-            this.GoalcomboBox.Location = new System.Drawing.Point(362, 56);
-            this.GoalcomboBox.Name = "GoalcomboBox";
-            this.GoalcomboBox.Size = new System.Drawing.Size(321, 29);
-            this.GoalcomboBox.TabIndex = 71;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(358, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 21);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "delete";
             // 
             // IspolnitelcomboBox
             // 
@@ -135,7 +118,7 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(35, 199);
+            this.button2.Location = new System.Drawing.Point(166, 199);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(369, 40);
@@ -147,7 +130,7 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(414, 199);
+            this.button3.Location = new System.Drawing.Point(166, 249);
             this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(369, 40);
@@ -160,7 +143,8 @@
             // 
             this.ResultscomboBox.FormattingEnabled = true;
             this.ResultscomboBox.Items.AddRange(new object[] {
-            "Дефект обнаружен",
+            "Дефект обнаружен на подающем",
+            "Дефект обнаружен на обратном",
             "Требуется мониторинг",
             "Необходим доступ",
             "Контрольный шурф",
@@ -199,19 +183,43 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(198, 342);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(501, 329);
+            this.pictureBox1.Size = new System.Drawing.Size(655, 404);
             this.pictureBox1.TabIndex = 110;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(984, 300);
+            this.button1.Location = new System.Drawing.Point(988, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 42);
+            this.button1.Size = new System.Drawing.Size(147, 77);
             this.button1.TabIndex = 111;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(362, 57);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(116, 25);
+            this.radioButton1.TabIndex = 112;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Подающий";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(484, 57);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(111, 25);
+            this.radioButton2.TabIndex = 113;
+            this.radioButton2.Text = "Обратный";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // SixthForm
             // 
@@ -219,6 +227,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DoljnostcomboBox);
@@ -229,8 +239,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.GoalcomboBox);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.IspolnitelcomboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.IdcomboBox);
@@ -253,8 +261,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox GoalcomboBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox IspolnitelcomboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox IdcomboBox;
@@ -267,5 +273,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

@@ -32,6 +32,10 @@ namespace ZaklychenieMDI
                 Analys.StepenId = StepencomboBox.SelectedIndex;
                 Analys.Primechanie = PrimechanietextBox.Text;
                 MainForm.Current.Color4 = Color.LawnGreen;
+
+                FifthForm f5 = new FifthForm();
+                f5.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+                f5.Show();
             }
             else
             {

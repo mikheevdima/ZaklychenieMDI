@@ -65,6 +65,10 @@ namespace ZaklychenieMDI
             {
                 Equipment.AllEquipment = EquipmentBox.Text.Substring(0, EquipmentBox.Text.Length - 2);
                 MainForm.Current.Color3 = Color.LawnGreen;
+
+                FourthForm f4 = new FourthForm();
+                f4.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+                f4.Show();
             }
             else
             {

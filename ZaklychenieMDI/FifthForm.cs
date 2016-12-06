@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -77,6 +78,10 @@ namespace ZaklychenieMDI
             ZaklychenieMDI.Layout.Picture = pictureBox1.Image;
             //ZaklychenieMDI.Layout.path = pictureBox1.ImageLocation;
             MainForm.Current.Color5 = Color.LawnGreen;
+
+            SixthForm f2 = new SixthForm();
+            f2.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+            f2.Show();
         }
 
         private void FifthForm_Load(object sender, EventArgs e)
@@ -150,6 +155,18 @@ namespace ZaklychenieMDI
                     pictureBox1.Image = Properties.Resources.нет;
                     break;
             }
+        }
+
+        private void SaveImage()
+        {
+            Image file = pictureBox1.Image;
+            file.Save("C:/OpenServer/picturetest123.jpeg", ImageFormat.Jpeg);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveImage();
+            Process.Start("mspaint.exe", "\"C:\\OpenServer\\picturetest123.jpeg\"");
         }
     }
 }

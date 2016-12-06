@@ -24,7 +24,7 @@ namespace ZaklychenieMDI
 {
     public partial class SixthForm : Form
     {
-        private readonly string TemplateFileName = @"C:\GitHub\ZaklychenieMDI\template.docx";
+        private readonly string TemplateFileName = @"D:\GitHub\ZaklychenieMDI\template.docx";
 
         public SixthForm()
         {
@@ -75,15 +75,16 @@ namespace ZaklychenieMDI
         private void Save()
         {
             SqlConnection conn = new SqlConnection(Program.Connection.GetConnectionStringByName("Conn3"));
-            string sql = string.Format("Insert Into Parameters(ID, seti, tkfrom, tkto, shirota, dolgota, d, l, izolyacia, pokritie, prokladka, " +
-                                       "allequipment, priznaki, pomehi, stepen, analiz, primechanie, pic, goal, ispolnitel, date, results) " +
-                                       "Values(@ID, @seti, @tkfrom, @tkto, @shirota, @dolgota, @d, @l, @izolyacia, @pokritie, @prokladka, " +
-                                       "@allequipment, @priznaki, @pomehi, @stepen, @analiz, @primechanie, @pic, @goal, @ispolnitel, @date, @results)");
+            string sql = string.Format("Insert Into Parameters(ID, seti, line, tkfrom, tkto, shirota, dolgota, d, l, izolyacia, pokritie, prokladka, " +
+                                       "allequipment, priznaki, pomehi, stepen, analiz, primechanie, pic, ispolnitel, doljnost, date, results) " +
+                                       "Values(@ID, @seti, @line, @tkfrom, @tkto, @shirota, @dolgota, @d, @l, @izolyacia, @pokritie, @prokladka, " +
+                                       "@allequipment, @priznaki, @pomehi, @stepen, @analiz, @primechanie, @pic, @ispolnitel, @doljnost, @date, @results)");
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 // Добавить параметры
                 cmd.Parameters.AddWithValue("@ID", Conclusion.Id);
                 cmd.Parameters.AddWithValue("@seti", SetParameters.Seti);
+                cmd.Parameters.AddWithValue("@line", SetParameters.Line);
                 cmd.Parameters.AddWithValue("@tkfrom", SetParameters.TkFrom);
                 cmd.Parameters.AddWithValue("@tkto", SetParameters.TkTo);
                 cmd.Parameters.AddWithValue("@shirota", SetParameters.Shirota);
@@ -100,8 +101,8 @@ namespace ZaklychenieMDI
                 cmd.Parameters.AddWithValue("@analiz", Analys.Analiz);
                 cmd.Parameters.AddWithValue("@primechanie", Analys.Primechanie);
                 cmd.Parameters.AddWithValue("@pic", ZaklychenieMDI.Layout.Pic);
-                cmd.Parameters.AddWithValue("@goal", Conclusion.Goal);
                 cmd.Parameters.AddWithValue("@ispolnitel", Conclusion.Ispolnitel);
+                cmd.Parameters.AddWithValue("@doljnost", Conclusion.Doljnost);
                 cmd.Parameters.AddWithValue("@date", Conclusion.Date);
                 cmd.Parameters.AddWithValue("@results", Conclusion.Results);
                 try
@@ -218,6 +219,7 @@ namespace ZaklychenieMDI
                 FindAndReplace(wordApp, "{Id}", Id);
                 FindAndReplace(wordApp, "{date}", Date);
                 FindAndReplace(wordApp, "{seti}", Seti);
+                FindAndReplace(wordApp, "{line}", ", " + Line);
                 FindAndReplace(wordApp, "{tk}", TkFrom + " - " + TkTo);
                 FindAndReplace(wordApp, "{d}", D);
                 FindAndReplace(wordApp, "{l}", L);
@@ -231,7 +233,7 @@ namespace ZaklychenieMDI
                 FindAndReplace(wordApp, "{results}", Results);
                 FindAndReplace(wordApp, "{ispolnitel}", Ispolnitel);
                 FindAndReplace(wordApp, "{doljnost'}", Doljnost);
-                SaveImage();
+                //SaveImage();
                 aDoc.Bookmarks.get_Item("Image").Range.InlineShapes.AddPicture("C:/OpenServer/picturetest123.jpeg");
                 DeleteImage();
             }
@@ -262,9 +264,8 @@ namespace ZaklychenieMDI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (GoalcomboBox.Text != "" && ResultscomboBox.Text != "" && IspolnitelcomboBox.Text != "")
+            if (DoljnostcomboBox.Text != "" && ResultscomboBox.Text != "" && IspolnitelcomboBox.Text != "")
             {
-                Goal = GoalcomboBox.Text;
                 Results = ResultscomboBox.Text;
                 Ispolnitel = IspolnitelcomboBox.Text;
                 Date = dateTimePicker1.Text;
@@ -292,7 +293,6 @@ namespace ZaklychenieMDI
             GetId();
             if (Results != null)
             {
-                GoalcomboBox.Text = Goal;
                 dateTimePicker1.Text = Date;
                 ResultscomboBox.SelectedIndex = ResultsId;
                 IspolnitelcomboBox.SelectedIndex = IspolnitelId;
@@ -303,12 +303,12 @@ namespace ZaklychenieMDI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Save();
+            //if ()
+            Save();
             string name = Seti;
             string final = name.Replace("-", "_").Replace("/", "").Replace("\"", "");
             saveFileDialog1.Filter = "Word Documents(*.docx;*.doc) | *.docx;*.doc";
             saveFileDialog1.FileName = final + " " + TkFrom + TkTo;
-            saveFileDialog1.FileName = "Test";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 CreateWordDocument(TemplateFileName, saveFileDialog1.FileName);
@@ -317,7 +317,8 @@ namespace ZaklychenieMDI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DeleteImage();
+            SaveImage();
+            Process.Start("mspaint.exe", "\"C:\\OpenServer\\picturetest123.jpeg\"");
         }
     }
 }

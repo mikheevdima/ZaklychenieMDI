@@ -146,6 +146,10 @@ namespace ZaklychenieMDI
                 TrumpetParameters.Prokladka = TipProkladkicomboBox.Text.ToLower();
                 TrumpetParameters.ProkladkaId = TipProkladkicomboBox.SelectedIndex;
                 MainForm.Current.Color2 = Color.LawnGreen;
+
+                ThirdForm f3 = new ThirdForm();
+                f3.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+                f3.Show();
             }
             else
             {

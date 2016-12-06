@@ -34,7 +34,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LineTocomboBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.LineFromcomboBox = new System.Windows.Forms.ComboBox();
             this.TypecomboBox = new System.Windows.Forms.ComboBox();
@@ -45,7 +44,8 @@
             this.VvodycomboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Arealabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.LinecomboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // maskedTextBox2
@@ -109,17 +109,6 @@
             this.LineTocomboBox.Size = new System.Drawing.Size(533, 28);
             this.LineTocomboBox.TabIndex = 92;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(64, 256);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 20);
-            this.label6.TabIndex = 91;
-            this.label6.Text = "Выберите участок";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -167,7 +156,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(611, 162);
+            this.label9.Location = new System.Drawing.Point(67, 166);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 21);
@@ -184,7 +173,7 @@
             "4 район",
             "5 район",
             "6 район"});
-            this.AreacomboBox.Location = new System.Drawing.Point(71, 202);
+            this.AreacomboBox.Location = new System.Drawing.Point(619, 109);
             this.AreacomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.AreacomboBox.Name = "AreacomboBox";
             this.AreacomboBox.Size = new System.Drawing.Size(534, 29);
@@ -194,7 +183,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 162);
+            this.label7.Location = new System.Drawing.Point(615, 70);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 21);
@@ -204,7 +193,7 @@
             // VvodycomboBox
             // 
             this.VvodycomboBox.FormattingEnabled = true;
-            this.VvodycomboBox.Location = new System.Drawing.Point(618, 202);
+            this.VvodycomboBox.Location = new System.Drawing.Point(74, 206);
             this.VvodycomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.VvodycomboBox.Name = "VvodycomboBox";
             this.VvodycomboBox.Size = new System.Drawing.Size(534, 29);
@@ -232,17 +221,25 @@
             this.Arealabel.TabIndex = 101;
             this.Arealabel.Visible = false;
             // 
-            // button2
+            // LinecomboBox
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button2.Location = new System.Drawing.Point(798, 492);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(369, 42);
-            this.button2.TabIndex = 102;
-            this.button2.Text = "Далее";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.LinecomboBox.Enabled = false;
+            this.LinecomboBox.FormattingEnabled = true;
+            this.LinecomboBox.Location = new System.Drawing.Point(619, 206);
+            this.LinecomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.LinecomboBox.Name = "LinecomboBox";
+            this.LinecomboBox.Size = new System.Drawing.Size(534, 29);
+            this.LinecomboBox.TabIndex = 104;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(615, 166);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 21);
+            this.label1.TabIndex = 103;
+            this.label1.Text = "Выберите участок\r\n";
             // 
             // FirstForm
             // 
@@ -250,7 +247,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 725);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.LinecomboBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Arealabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.maskedTextBox2);
@@ -259,7 +257,6 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LineTocomboBox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.LineFromcomboBox);
             this.Controls.Add(this.TypecomboBox);
@@ -288,7 +285,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox LineTocomboBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox LineFromcomboBox;
         private System.Windows.Forms.ComboBox TypecomboBox;
@@ -299,6 +295,7 @@
         private System.Windows.Forms.ComboBox VvodycomboBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Arealabel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox LinecomboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

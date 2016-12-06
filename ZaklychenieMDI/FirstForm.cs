@@ -39,6 +39,27 @@ namespace ZaklychenieMDI
             InitializeComponent();
         }
 
+        private void LoadListLine(string tabl)
+        {
+            string seti = VvodycomboBox.Text;
+            SqlConnection conn = new SqlConnection(Program.Connection.GetConnectionStringByName("Conn"));
+            string sql = string.Format("Select Distinct linefrom From {0} where seti = '{1}'", tabl, seti);
+            SqlDataAdapter cmd = new SqlDataAdapter(sql, conn);
+            try
+            {
+                conn.Open();
+                DataSet ds = new DataSet();
+                cmd.Fill(ds);
+                conn.Close();
+                LinecomboBox.DataSource = ds.Tables[0];
+                LinecomboBox.DisplayMember = "linefrom";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка участка от!" + ex.Message);
+            }
+        }
+
         private void LoadListUzelTo(string tabl)
         {
             string text = VvodycomboBox.Text;
@@ -137,7 +158,19 @@ namespace ZaklychenieMDI
 
         private void TypecomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (TypecomboBox.Text == "Абон вводы")
+            {
+                LinecomboBox.Enabled = true;
+            }
+            else
+            {
+                LinecomboBox.Enabled = false;
+            }
+            AreacomboBox.Text = "";
+            VvodycomboBox.Text = "";
+            LinecomboBox.Text = "";
+            LineFromcomboBox.Text = "";
+            LineTocomboBox.Text = "";
         }
 
         private void AreacomboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,6 +183,10 @@ namespace ZaklychenieMDI
         {
             MainForm.Current.Color1 = Color.Red;
             //MainForm.Current.Color2 = Color.Red;
+            if (TypecomboBox.Text == "Абон вводы")
+            {
+                LoadListLine(IfArea());
+            }
             LoadListUzelFrom(IfArea());
             LoadListUzelTo(IfArea());
             TrumpetParameters.D = null;
@@ -165,6 +202,7 @@ namespace ZaklychenieMDI
                 SetParameters.TkFrom = LineFromcomboBox.Text;
                 SetParameters.TkTo = LineTocomboBox.Text;
                 SetParameters.Area = Arealabel.Text;
+                SetParameters.Line = LinecomboBox.Text;
                 if (maskedTextBox1.Text == "N  ,     °")
                 {
                     SetParameters.Shirota = "";
@@ -181,19 +219,17 @@ namespace ZaklychenieMDI
                 {
                     SetParameters.Dolgota = maskedTextBox2.Text;
                 }
+                SecondForm f2 = new SecondForm();
+                f2.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+                f2.Show();
             }
             else
             {
                 MessageBox.Show("Заполните все поля!");
             }
 
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Name == "SecondForm")
-                {
-                    return;
-                }
-            }
+            //CloseChildForms();
+
         }
 
         private void FirstForm_Load(object sender, EventArgs e)
@@ -216,21 +252,6 @@ namespace ZaklychenieMDI
             {
                 f.Close();
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Name == "SecondForm")
-                {
-                    return;
-                }
-            }
-            CloseChildForms();
-            SecondForm f2 = new SecondForm();
-            f2.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
-            f2.Show();
         }
     }
 }

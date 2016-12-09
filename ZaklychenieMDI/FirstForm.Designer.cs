@@ -50,49 +50,53 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(616, 411);
+            this.maskedTextBox2.Location = new System.Drawing.Point(693, 387);
             this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.maskedTextBox2.Mask = "E00.00000°";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(531, 29);
             this.maskedTextBox2.TabIndex = 99;
+            this.maskedTextBox2.Visible = false;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(72, 414);
+            this.maskedTextBox1.Location = new System.Drawing.Point(692, 305);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.maskedTextBox1.Mask = "N00.00000°";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(531, 29);
             this.maskedTextBox1.TabIndex = 98;
+            this.maskedTextBox1.Visible = false;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(611, 374);
+            this.label23.Location = new System.Drawing.Point(688, 350);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(74, 20);
             this.label23.TabIndex = 97;
             this.label23.Text = "Долгота";
+            this.label23.Visible = false;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(64, 374);
+            this.label24.Location = new System.Drawing.Point(684, 265);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(67, 20);
             this.label24.TabIndex = 96;
             this.label24.Text = "Широта";
+            this.label24.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(609, 288);
+            this.label5.Location = new System.Drawing.Point(13, 377);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 20);
@@ -103,7 +107,7 @@
             // 
             this.LineTocomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LineTocomboBox.FormattingEnabled = true;
-            this.LineTocomboBox.Location = new System.Drawing.Point(619, 325);
+            this.LineTocomboBox.Location = new System.Drawing.Point(17, 403);
             this.LineTocomboBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.LineTocomboBox.Name = "LineTocomboBox";
             this.LineTocomboBox.Size = new System.Drawing.Size(533, 28);
@@ -113,7 +117,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(62, 288);
+            this.label8.Location = new System.Drawing.Point(13, 317);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 20);
@@ -124,7 +128,7 @@
             // 
             this.LineFromcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LineFromcomboBox.FormattingEnabled = true;
-            this.LineFromcomboBox.Location = new System.Drawing.Point(72, 325);
+            this.LineFromcomboBox.Location = new System.Drawing.Point(17, 343);
             this.LineFromcomboBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.LineFromcomboBox.Name = "LineFromcomboBox";
             this.LineFromcomboBox.Size = new System.Drawing.Size(531, 28);
@@ -136,7 +140,7 @@
             this.TypecomboBox.Items.AddRange(new object[] {
             "Р/с или т/м",
             "Абон вводы"});
-            this.TypecomboBox.Location = new System.Drawing.Point(71, 109);
+            this.TypecomboBox.Location = new System.Drawing.Point(17, 75);
             this.TypecomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.TypecomboBox.Name = "TypecomboBox";
             this.TypecomboBox.Size = new System.Drawing.Size(533, 29);
@@ -146,7 +150,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(64, 70);
+            this.label10.Location = new System.Drawing.Point(13, 45);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(122, 21);
@@ -156,7 +160,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(67, 166);
+            this.label9.Location = new System.Drawing.Point(13, 181);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 21);
@@ -173,7 +177,7 @@
             "4 район",
             "5 район",
             "6 район"});
-            this.AreacomboBox.Location = new System.Drawing.Point(619, 109);
+            this.AreacomboBox.Location = new System.Drawing.Point(17, 143);
             this.AreacomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.AreacomboBox.Name = "AreacomboBox";
             this.AreacomboBox.Size = new System.Drawing.Size(534, 29);
@@ -183,7 +187,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(615, 70);
+            this.label7.Location = new System.Drawing.Point(13, 113);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 21);
@@ -193,7 +197,7 @@
             // VvodycomboBox
             // 
             this.VvodycomboBox.FormattingEnabled = true;
-            this.VvodycomboBox.Location = new System.Drawing.Point(74, 206);
+            this.VvodycomboBox.Location = new System.Drawing.Point(14, 211);
             this.VvodycomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.VvodycomboBox.Name = "VvodycomboBox";
             this.VvodycomboBox.Size = new System.Drawing.Size(534, 29);
@@ -204,7 +208,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button1.Location = new System.Drawing.Point(423, 492);
+            this.button1.Location = new System.Drawing.Point(66, 440);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 42);
             this.button1.TabIndex = 100;
@@ -225,7 +229,7 @@
             // 
             this.LinecomboBox.Enabled = false;
             this.LinecomboBox.FormattingEnabled = true;
-            this.LinecomboBox.Location = new System.Drawing.Point(619, 206);
+            this.LinecomboBox.Location = new System.Drawing.Point(17, 279);
             this.LinecomboBox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.LinecomboBox.Name = "LinecomboBox";
             this.LinecomboBox.Size = new System.Drawing.Size(534, 29);
@@ -234,7 +238,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(615, 166);
+            this.label1.Location = new System.Drawing.Point(13, 249);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 21);

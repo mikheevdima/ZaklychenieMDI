@@ -33,6 +33,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,8 +73,9 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(413, 616);
+            this.button2.Location = new System.Drawing.Point(142, 560);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(369, 40);
@@ -96,13 +99,30 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(360, 513);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(142, 512);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 61);
+            this.button1.Size = new System.Drawing.Size(369, 40);
             this.button1.TabIndex = 104;
             this.button1.Text = "Рисовать схему";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(673, 140);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(565, 29);
+            this.textBox1.TabIndex = 105;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(669, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 21);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "Название схемы";
             // 
             // FifthForm
             // 
@@ -110,6 +130,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
@@ -135,5 +157,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

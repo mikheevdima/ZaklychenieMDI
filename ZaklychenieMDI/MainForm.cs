@@ -127,6 +127,9 @@ namespace ZaklychenieMDI
         private void MainForm_Load(object sender, EventArgs e)
         {
             Color();
+            FirstForm fr1 = new FirstForm();
+            fr1.MdiParent = this;
+            fr1.Show();
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -172,6 +175,16 @@ namespace ZaklychenieMDI
             SixthForm fr6 = new SixthForm();
             fr6.MdiParent = this;
             fr6.Show();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

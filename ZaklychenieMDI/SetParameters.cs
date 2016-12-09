@@ -12,6 +12,7 @@ namespace ZaklychenieMDI
         public static string TkFrom { get; set; }
         public static string TkTo { get; set; }
         public static string Area { get; set; }
+        public static string AreaOfficial { get; set; }
         public static string Shirota { get; set; }
         public static string Dolgota { get; set; }
         public static string Line { get; set; }

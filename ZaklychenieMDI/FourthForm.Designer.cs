@@ -64,10 +64,9 @@
             this.StepencomboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StepencomboBox.FormattingEnabled = true;
             this.StepencomboBox.Items.AddRange(new object[] {
-            "Класс <<А>> Критический дефект, требует немедленного устранения",
-            "Класс <<В>> Значительный дефект, требующий ремонта при первой возможности",
-            "Класс <<С>> Малозначительный дефект, требующий контроля и ремонта в плановый пери" +
-                "од"});
+            "Критический дефект, требует немедленного устранения",
+            "Значительный дефект, требующий ремонта при первой возможности",
+            "Малозначительный дефект, требующий контроля и ремонта в плановый период"});
             this.StepencomboBox.Location = new System.Drawing.Point(24, 161);
             this.StepencomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.StepencomboBox.Name = "StepencomboBox";

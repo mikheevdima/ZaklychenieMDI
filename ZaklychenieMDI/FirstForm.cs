@@ -202,6 +202,7 @@ namespace ZaklychenieMDI
                 SetParameters.TkFrom = LineFromcomboBox.Text;
                 SetParameters.TkTo = LineTocomboBox.Text;
                 SetParameters.Area = Arealabel.Text;
+                SetParameters.AreaOfficial = AreacomboBox.Text;
                 SetParameters.Line = LinecomboBox.Text;
                 if (maskedTextBox1.Text == "N  ,     °")
                 {

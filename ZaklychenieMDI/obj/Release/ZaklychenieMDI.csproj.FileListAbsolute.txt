@@ -1,0 +1,16 @@
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\bin\Release\ZaklychenieMDI.exe.config
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.csproj.ResolveComReference.cache
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\bin\Release\ZaklychenieMDI.exe
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\bin\Release\ZaklychenieMDI.pdb
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.FifthForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.FourthForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.HelloForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.MainForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.FirstForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.SecondForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.Properties.Resources.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.SixthForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.ThirdForm.resources
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.csproj.GenerateResource.Cache
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.exe
+D:\GitHub\ZaklychenieMDI\ZaklychenieMDI\obj\Release\ZaklychenieMDI.pdb

@@ -233,6 +233,16 @@ namespace ZaklychenieMDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap лого {
+            get {
+                object obj = ResourceManager.GetObject("лого", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap нет {
             get {
                 object obj = ResourceManager.GetObject("нет", resourceCulture);
@@ -246,6 +256,16 @@ namespace ZaklychenieMDI.Properties {
         internal static System.Drawing.Bitmap Теплосеть {
             get {
                 object obj = ResourceManager.GetObject("Теплосеть", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Титульная_заставка_для_программы {
+            get {
+                object obj = ResourceManager.GetObject("Титульная заставка для программы", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

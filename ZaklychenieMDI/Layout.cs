@@ -11,6 +11,8 @@ namespace ZaklychenieMDI
     {
         public static byte[] Pic {get; set; }
         public static Image Picture { get; set; }
-        public static string path { get; set; }
+        public static string Path { get; set; }
+        public static string PathModified { get; set; }
+
     }
 }

@@ -189,9 +189,6 @@
     <None Include="Resources\7f4adb05-0f8e-406c-990b-2ef9dff3f021.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\дом+дорога1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\дом+дорога+камера1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\805524cb23_751x5011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Титульная заставка для программы.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\лого.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

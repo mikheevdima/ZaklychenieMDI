@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ZaklychenieMDI.Layout;
+using static ZaklychenieMDI.SetParameters;
 
 namespace ZaklychenieMDI
 {
@@ -64,10 +66,7 @@ namespace ZaklychenieMDI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Bitmap bm = new Bitmap(pictureBox1.Image);
-            //MemoryStream ms = new MemoryStream();
-            //bm.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
-            //ZaklychenieMDI.Layout.Pic = ms.ToArray();
+            /*
             Rectangle r = pictureBox1.RectangleToScreen(pictureBox1.ClientRectangle);
             Bitmap b = new Bitmap(r.Width, r.Height);
             Graphics g = Graphics.FromImage(b);
@@ -76,9 +75,8 @@ namespace ZaklychenieMDI
             b.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
             ZaklychenieMDI.Layout.Pic = ms.ToArray();
             ZaklychenieMDI.Layout.Picture = pictureBox1.Image;
-            //ZaklychenieMDI.Layout.path = pictureBox1.ImageLocation;
             MainForm.Current.Color5 = Color.LawnGreen;
-
+            */
             SixthForm f2 = new SixthForm();
             f2.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
             f2.Show();
@@ -86,12 +84,15 @@ namespace ZaklychenieMDI
 
         private void FifthForm_Load(object sender, EventArgs e)
         {
+            string final = (Seti + Line + TkFrom + TkTo).Replace("-", "_").Replace("/", "").Replace("\"", "").Replace(" ","_");
+            textBox1.Text = final;
+            /*
             if (ZaklychenieMDI.Layout.Pic != null)
             {
                 MemoryStream ms = new MemoryStream(ZaklychenieMDI.Layout.Pic);
                 pictureBox1.Image = Image.FromStream(ms);
             }
-            
+*/            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,13 +161,23 @@ namespace ZaklychenieMDI
         private void SaveImage()
         {
             Image file = pictureBox1.Image;
-            file.Save("C:/OpenServer/picturetest123.jpeg", ImageFormat.Jpeg);
+            file.Save(ZaklychenieMDI.Layout.Path, ImageFormat.Jpeg);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveImage();
-            Process.Start("mspaint.exe", "\"C:\\OpenServer\\picturetest123.jpeg\"");
+            try
+            {
+                ZaklychenieMDI.Layout.Path = "C:/ZakluchenieFolder/" + textBox1.Text + ".jpeg";
+                SaveImage();
+                Process.Start("mspaint.exe", "\"C:\\ZakluchenieFolder\\" + textBox1.Text + ".jpeg\"");
+                MainForm.Current.Color5 = Color.LawnGreen;
+                button2.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка сохранения изображения! Проверьте название!" + ex.Message);
+            }
         }
     }
 }

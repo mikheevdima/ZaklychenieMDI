@@ -88,7 +88,6 @@ namespace ZaklychenieMDI
 
         private void FindD(string tabl)
         {
-            string a = "";
             string seti = SetParameters.Seti;
             string uzelfrom = SetParameters.TkFrom;
             string uzelto = SetParameters.TkTo;
@@ -141,9 +140,9 @@ namespace ZaklychenieMDI
             {
                 TrumpetParameters.D = DtextBox.Text;
                 TrumpetParameters.L = LtextBox.Text;
-                TrumpetParameters.Izolyacia = TipIzolyaciicomboBox.Text.ToLower();
-                TrumpetParameters.Pokrytie = PoktiriecomboBox.Text.ToLower();
-                TrumpetParameters.Prokladka = TipProkladkicomboBox.Text.ToLower();
+                TrumpetParameters.Izolyacia = TipIzolyaciicomboBox.Text;
+                TrumpetParameters.Pokrytie = PoktiriecomboBox.Text;
+                TrumpetParameters.Prokladka = TipProkladkicomboBox.Text;
                 TrumpetParameters.ProkladkaId = TipProkladkicomboBox.SelectedIndex;
                 MainForm.Current.Color2 = Color.LawnGreen;
 

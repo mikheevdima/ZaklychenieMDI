@@ -179,5 +179,15 @@ namespace ZaklychenieMDI
                 MessageBox.Show("Ошибка сохранения изображения! Проверьте название!" + ex.Message);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files(*.BMP; *.JPG; *.GIF)| *.BMP; *.JPG; *.GIF | All files(*.*) | *.*";
+            ;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
     }
 }

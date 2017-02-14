@@ -26,10 +26,38 @@ namespace ZaklychenieMDI
     public partial class SixthForm : Form
     {
         private readonly string TemplateFileName = @"C:\Users\Теплосеть\Documents\Blanks\template.docx";
+        //private readonly string TemplateFileName = @"D:\GitHub\ZaklychenieMDI\template.docx";
 
         public SixthForm()
         {
             InitializeComponent();
+        }
+
+        private string GetSign()
+        {
+            string sign = null;
+            switch (IspolnitelId)
+            {
+                case 0:
+                    sign = @"C:\Users\Теплосеть\Documents\Blanks\Клыгин.jpg";
+                    break;
+                case 1:
+                    sign = @"C:\Users\Теплосеть\Documents\Blanks\Чуйко.jpg";
+                    break;
+                case 2:
+                    sign = @"C:\Users\Теплосеть\Documents\Blanks\Дробыш.jpg";
+                    break;
+                case 3:
+                    sign = @"C:\Users\Теплосеть\Documents\Blanks\Виноградов.jpg";
+                    break;
+                case 4:
+                    sign = @"C:\Users\Теплосеть\Documents\Blanks\Шикин.jpg";
+                    break;
+                case 5:
+                    sign = @"C:\Users\Теплосеть\Documents\Blanks\Архипов.jpg";
+                    break;
+            }
+            return sign;
         }
 
         private void SaveImage()
@@ -253,6 +281,7 @@ namespace ZaklychenieMDI
                 FindAndReplace(wordApp, "{doljnost'}", Doljnost);
                 //SaveImage();
                 aDoc.Bookmarks.get_Item("Image").Range.InlineShapes.AddPicture(textBox1.Text);
+                aDoc.Bookmarks.get_Item("Sign").Range.InlineShapes.AddPicture(GetSign());
                 //DeleteImage();
                 MessageBox.Show("Отчет создан!");
                 wordApp.Visible = true;

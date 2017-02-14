@@ -189,9 +189,6 @@
     <None Include="Resources\7f4adb05-0f8e-406c-990b-2ef9dff3f021.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\дом+дорога+камера1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\камера+дорога1.jpg" />
   </ItemGroup>
   <ItemGroup>

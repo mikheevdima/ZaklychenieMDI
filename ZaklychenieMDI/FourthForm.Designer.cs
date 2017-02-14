@@ -66,7 +66,8 @@
             this.StepencomboBox.Items.AddRange(new object[] {
             "Критический дефект, требует немедленного устранения",
             "Значительный дефект, требующий ремонта при первой возможности",
-            "Малозначительный дефект, требующий контроля и ремонта в плановый период"});
+            "Малозначительный дефект, требующий контроля и ремонта в плановый период",
+            "Отсутствует"});
             this.StepencomboBox.Location = new System.Drawing.Point(24, 161);
             this.StepencomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.StepencomboBox.Name = "StepencomboBox";
@@ -93,7 +94,8 @@
             "Падение давления по манометру на участке теплотрассы",
             "Повышенный расход теплоносителя на участке теплотрассы",
             "Признаки повреждения теплотрассы на момент обследования на данном участке не обна" +
-                "ружены"});
+                "ружены",
+            "Отсутствуют"});
             this.PriznakicomboBox.Location = new System.Drawing.Point(24, 41);
             this.PriznakicomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.PriznakicomboBox.Name = "PriznakicomboBox";
@@ -152,7 +154,8 @@
             this.AnalizcomboBox.Items.AddRange(new object[] {
             "Достоверная (80%-99%)",
             "Позитивная (60%-80%)",
-            "Негативная (30%-60%)"});
+            "Негативная (30%-60%)",
+            "Отсутствует (0%). Требуется мониторинг."});
             this.AnalizcomboBox.Location = new System.Drawing.Point(24, 221);
             this.AnalizcomboBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnalizcomboBox.Name = "AnalizcomboBox";

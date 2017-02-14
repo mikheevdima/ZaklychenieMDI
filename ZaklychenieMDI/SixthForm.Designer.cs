@@ -88,9 +88,7 @@
             // 
             this.IspolnitelcomboBox.FormattingEnabled = true;
             this.IspolnitelcomboBox.Items.AddRange(new object[] {
-            "Е.Н Цыцеров",
             "М.М. Клыгин",
-            "В.В. Антипов",
             "И.С. Чуйко",
             "Е.В. Дробыш",
             "А.В. Виноградов",
@@ -157,6 +155,7 @@
             this.ResultscomboBox.Items.AddRange(new object[] {
             "Дефект обнаружен на подающем",
             "Дефект обнаружен на обратном",
+            "Дефект обнаружен. Тип трубопровода не определен.",
             "Требуется мониторинг",
             "Необходим доступ",
             "Контрольный шурф",
@@ -197,7 +196,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(464, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(655, 495);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 110;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
